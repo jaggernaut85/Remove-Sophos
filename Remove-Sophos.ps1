@@ -116,11 +116,11 @@ ForEach ($App in $AppArray)
             }
     }
 
-Write-Output "Attempting to uninstall Sophos Endpoint Defense"
+Write-Output "Attempting to uninstall Sophos Endpoint Agent"
         try {
-            start-process "C:\Program Files\Sophos\Endpoint Defense\uninstall.exe"
-            Write-Output "Successfully removed Sophos Endpoint Defense"
+            start-process "C:\Program Files\Sophos\Sophos Endpoint Agent\SophosUninstall.exe"
+            Write-Output "Successfully removed Sophos Endpoint Agent"
         }
         catch {
-            Write-Error "Error: Failed to remove Sophos Endpoint Defense"
+            Write-Error "Error: Failed to remove Sophos Endpoint Agent"
         }
